@@ -13,19 +13,20 @@ function LoginPage() {
     singin(data);
   });
 
-  useEffect(() => {
-    // Obtiene los valores iniciales de los campos
-    const { email, password } = getValues();
-
-    // Verifica si los campos no están vacíos
-    if (email?.trim() && password?.trim()) {
-      onSubmit();
-    }
-  }, []); // Ejecuta esto solo cuando se carga el componente
 
   useEffect(() => {
     if (isAuthenticated) navigate("/tasks");
   }, [isAuthenticated]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      const { email, password } = getValues();
+      if (email?.trim() && password?.trim()) {
+        onSubmit();
+      }
+    }, 1000);
+    
+  }, []); 
 
   return (
     <div className="flex h-[calc(100vh-100px)] items-center justify-center bg-gradient-to-r from-indigo-400 to-indigo-600">
