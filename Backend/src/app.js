@@ -15,7 +15,7 @@ import visitRoutes from "./routes/visit.routes.js"
 const app = express();
 
 app.use(cors({
-    origin:'http://localhost:5173',
+    origin:'https://proyecto-frontend-hkbx.onrender.com',
     credentials:true
 }));
 app.use(morgan('dev'));
