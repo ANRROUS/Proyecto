@@ -197,7 +197,7 @@ function Dashboard(props) {
                 }))}
                 branding={{
                     logo: (
-                        <img src="./src/assets/logo.png" alt="LuxeStays Logo" />
+                        <img src="../../assets/images/logo.png" alt="LuxeStays Logo" />
                     ),
                     title: "LuxeStays"
                 }}
