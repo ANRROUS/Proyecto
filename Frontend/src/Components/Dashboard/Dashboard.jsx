@@ -27,6 +27,8 @@ import Personal from "../Negocios/Personal/Personal";
 import Clientes from "../ParaTi/Clientes/Clientes";
 import styled from "styled-components";
 
+import logo from "../../assets/logo.png";
+
 const StyledSelect = styled("select")({
     padding: "0.5rem",
     borderRadius: "10px",
@@ -197,7 +199,7 @@ function Dashboard(props) {
                 }))}
                 branding={{
                     logo: (
-                        <img src="../../assets/logo.png" alt="Logo" />
+                        <img src={logo} alt="Logo" />
                     ),
                     title: "LuxeStays"
                 }}
