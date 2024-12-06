@@ -5,33 +5,23 @@ import { useEffect } from 'react';
 import loginImgae from '../assets/images/loginimg.jpg';
 
 function LoginPage() {
-  const { register, handleSubmit, getValues, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors } } = useForm();
   const { singin, errors: singinErrors, isAuthenticated } = useAuth();
   const navigate = useNavigate();
 
   const onSubmit = handleSubmit((data) => {
     singin(data);
-  });
-
+  })
 
   useEffect(() => {
     if (isAuthenticated) navigate("/tasks");
-  }, [isAuthenticated]);
+  }, [isAuthenticated])
 
-  useEffect(() => {
-    setTimeout(() => {
-      const { email, password } = getValues();
-      if (email?.trim() && password?.trim()) {
-        onSubmit();
-      }
-    }, 1000);
-    
-  }, []); 
 
   return (
     <div className="flex h-[calc(100vh-100px)] items-center justify-center bg-gradient-to-r from-indigo-400 to-indigo-600">
       <div className="flex max-w-4xl w-full bg-zinc-900 rounded-lg shadow-lg overflow-hidden">
-        {/* izquierda */}
+        {/* izquierda*/}
         <div className="flex flex-col justify-center w-1/2 p-12 transform transition duration-300 hover:scale-105">
           {singinErrors.map((error, i) => (
             <div className="bg-red-600 text-white p-2 rounded mb-2" key={i}>
@@ -92,6 +82,8 @@ function LoginPage() {
       </div>
     </div>
   );
+
+
 }
 
-export default LoginPage;
+export default LoginPage
