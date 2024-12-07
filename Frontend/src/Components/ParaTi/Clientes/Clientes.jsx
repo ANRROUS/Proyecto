@@ -108,9 +108,9 @@ const Clientes = () => {
 
     const columnas = [
         { field: "id", headerName: "ID", flex: 1, minWidth: 150 },
-        { field: "nombre", headerName: "Nombre", flex: 1, minWidth: 150 },
-        { field: "numero", headerName: "Número", flex: 1, minWidth: 150 },
-        { field: "fechaRegistro", headerName: "Fecha de Registro", flex: 1, minWidth: 150 },
+        { field: "nombre", headerName: t("Nombre"), flex: 1, minWidth: 150 },
+        { field: "numero", headerName: t("Número"), flex: 1, minWidth: 150 },
+        { field: "fechaRegistro", headerName: t("Fecha de Registro"), flex: 1, minWidth: 150 },
         {
             field: "acción",
             headerName: " ",
