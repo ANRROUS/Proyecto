@@ -275,7 +275,7 @@ export default function Reportes() {
                             <NegativeChange>{clientes_por}%</NegativeChange>
                         )
                     )}
-                    <ChangeDescription>{t("desde las ultimas 24 horas")}</ChangeDescription>
+                    <ChangeDescription>{t("desde el mes pasado")}</ChangeDescription>
                 </Change>
             </Card>
 
